@@ -1,0 +1,23 @@
+
+
+nav {
+  color: #FFFFFF;
+  height: 120px;
+  background-color: #4056A1;
+  font-size: 24px;
+  font-family: Bungee;
+  padding: 1.5em;
+  z-index: 9
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.navbarRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
