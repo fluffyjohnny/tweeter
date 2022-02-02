@@ -1,38 +1,54 @@
 
-
-
-
-
-
 .new-tweet {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
 }
 
 .form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   column-gap: 30px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 
 .button {
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
   justify-content: space-between;
-  column-gap: 400px;
+  margin-top: 13px;
 }
 
 
 #tweet-text {
   display: flex;
-  border-radius: 5px;
-  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-bottom : 4px solid #545149;
+  outline: none;
+  width: 100%;
   font-size: 20px;
   justify-content: center;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+}
+
+label {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+form button {
+  background-color: #4056A1;
+  color: white;
+  border: none;
+  font-size: 19px;
+  padding: 6px 10px;
+}
+
+#new-tweet {
+  display: flex;
+  border: black;
 }

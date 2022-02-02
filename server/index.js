@@ -34,7 +34,7 @@ app.use("/tweets/", tweetsRoutes);
 
 
 app.post('/tweets/', (res, req) => {
-  res.redirect('/register');
+  
 });
 
 app.listen(PORT, () => {

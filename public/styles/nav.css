@@ -20,4 +20,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
 }

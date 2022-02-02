@@ -3,6 +3,8 @@
 header {
   height: 400px;
   width: auto;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
   background-color: #e8e4cf;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
 }

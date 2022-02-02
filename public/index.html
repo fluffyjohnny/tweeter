@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
+
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
@@ -20,14 +23,13 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/button.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
   <!-- Top nav bar (fixed) -->
@@ -52,27 +54,28 @@
   <main class="container">
 
     <section class="new-tweet">
-      <div>
-      <h3>Compose Tweet</h3>
-      </div>
-      <div class="form">
-        <dive>
+      <h2>Compose Tweet</h2>
+        <form>
           <label for="tweet-text">What are you humming about?</label>
-        </dive>
-        <form action="/tweet/" method="POST">
-          <textarea name="text" id="tweet-text" placeholder="TurtlesRcool"></textarea>
-      </div>
-
-
-        <div class="button">
-          <button style="font-family: Bungee;" type="submit" class="button-18" role="button">Tweet</button>
-        
-          <output name="counter" class="counter" for="tweet-text">140</output>
-       </div>
-          
-      </form>
+          <textarea name="text" id="tweet-text" ></textarea>
+          <div class="button">
+            <button id="tweet-button" style="font-family: Bungee;" type="submit" role="button">Tweet</button>
+            <output style="font-family: Bungee;" name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
     </section>
+    <section>
+      <ul id="main-list">
+        <div>tweet below</div>
+      </ul>
 
+
+    </section>
   </main>
 </body>
+
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </html>
