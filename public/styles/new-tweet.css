@@ -55,3 +55,7 @@ form button {
   display: flex;
   border: black;
 }
+
+.counter {
+  text-shadow: 6px 2px #D3D3D3;
+}
