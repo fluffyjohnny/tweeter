@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/article.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,9 +47,9 @@
     <span>
       <img src="/images/profile-hex.png">
     </span>
-    <span>
+  
       <h2>Baby Bokchoy</h2>
-    </span>
+   
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
@@ -58,7 +59,7 @@
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" ></textarea>
-          <div class="button">
+          <div class="footer">
             <button id="tweet-button" style="font-family: Bungee;" type="submit" role="button">Tweet</button>
             <output style="font-family: Bungee;" name="counter" class="counter" for="tweet-text">140</output>
           </div>
@@ -66,10 +67,38 @@
     </section>
 
 
-    <section>
-      <ul id="main-list">
-        <div>tweet below</div>
-      </ul>
+    <section class="old-tweet">
+      <article id="article">
+        <header class="old-tweet">
+          <div class="name">
+            <i class="far fa-laugh"></i>
+            Jeff
+          </div>
+          <div class="nameAt">
+            @ChanningTatum
+          </div>
+        </header>
+        <p id="tweet-content"> hello my name is Jieff</p>
+        <footer>
+          <div>
+            8 years ago
+          </div>
+          <div>
+          <div class="icons">
+            <div class="icon1">
+              <i class="fa-solid fa-flag"></i>
+            </div>
+            <div class="icon2">
+              <i class="fa-solid fa-retweet"></i>
+            </div>
+            <div class='icon3'>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        </footer>
+
+      </article>
 
 
     </section>
