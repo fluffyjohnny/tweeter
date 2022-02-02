@@ -10,11 +10,9 @@
 $(() => {
   const $article = $('#article');
   const $inputButton = $('#tweet-button');
-  const $button =$('form button');
-  const $icon1 = $('.icon1');
-  const $icon2 = $('.icon2');
-  const $icon3 = $('.icon3');
 
+
+  // post new tweet
   $inputButton.on('click', (event) => {
     event.preventDefault();
     const $inputField = $('#tweet-text');
@@ -25,15 +23,32 @@ $(() => {
     $('.counter').html(140); 
   });
 
+  // sticky navbar 
+  window.onscroll = function() {myFunction()};
+  const navbar = document.getElementById("navbar");
+  const sticky = navbar.offsetTop;
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  };
+
+  // hover over Tweet button
+  const $button =$('form button');
   $button.mouseenter(() => {
     $button.css('box-shadow', '8px 5px #D3D3D3');
+    $button.css('background-color', '#191970');
     $button.css('transition', '.4s');
   })
   $button.mouseleave(() => {
     $button.css('box-shadow', 'none');
+    $button.css('background-color', '#4056A1');
     $button.css('transition', '.4s');
   })
 
+  // hover over articles
   $article.mouseenter(() => {
     $article.css('box-shadow', '12px 7px #D3D3D3');
     $article.css('transition', '.4s');
@@ -43,6 +58,10 @@ $(() => {
     $article.css('transition', '.4s');
   })
 
+  // hover over icons
+  const $icon1 = $('.icon1');
+  const $icon2 = $('.icon2');
+  const $icon3 = $('.icon3');
   $icon1.mouseenter(() => {
     $icon1.css('color', '#8B0000');
     $icon1.css('transition', '.3s');

@@ -10,6 +10,7 @@
   font-family: "Source Sans Pro";
   font-weight: 600;
   border: solid;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 15px;
 }
@@ -30,6 +31,7 @@ header {
 .nameAt {
   font-size: 18px;
   color: #CCCCCC;
+  overflow: hidden;
 }
 
 #tweet-content {
@@ -42,6 +44,7 @@ header {
   margin: 0px;
   font-size: 25px;
   font-weight: 300;
+  overflow: hidden;
 }
 
 footer {

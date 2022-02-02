@@ -1,18 +1,22 @@
 
-
-nav {
+#navbar {
+  display: flex;
+  align-items: center;
   color: #FFFFFF;
   height: 120px;
   background-color: #4056A1;
-  font-size: 24px;
   font-family: Bungee;
-  padding: 1.5em;
-  z-index: 9
-}
-
-.navbar {
+  padding: 0px 1.5em;
+  z-index: 9;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  
+}
+
+.logo {
+  font-size: 35px;
+  /* padding-top: 15px; */
 }
 
 
@@ -22,4 +26,10 @@ nav {
   align-items: center;
   font-family: "Source Sans Pro";
   font-weight: 600;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
 }

@@ -48,6 +48,7 @@ form button {
   border: none;
   font-size: 19px;
   padding: 6px 10px;
+  border-radius: 5px;
 }
 
 #new-tweet {
