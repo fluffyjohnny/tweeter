@@ -14,8 +14,3 @@ $(input).on('input', function() {
     $('.counter').html(140 - count);
   }
 });
-
-
-$(input).on('input', function() {
-  console.log($(".counter"));
-});

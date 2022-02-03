@@ -55,7 +55,7 @@
 
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
+        <form id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" ></textarea>
           <div class="footer">
@@ -65,19 +65,7 @@
         </form>
     </section>
     <section id="tweet-container">
-    </section>
-  </main>
-</body>
-
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script type="text/javascript" src="/scripts/hover.js"></script>
-  <script type="text/javascript" src="/scripts/navbar.js"></script>
-</html>
-
-<!-- 
+      
 
 <article class="article">
   <header class="user">
@@ -96,7 +84,7 @@
   </section>
   <footer class="footer">
     <div class="timeago">
-      <% timeago.format(new Date()); %>
+      time
     </div>
     <div>
     <div class="icons">
@@ -112,5 +100,17 @@
     </div>
   </div>
   </footer>
+</article>
 
-</article> -->
+    </section>
+  </main>
+</body>
+
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
+</html>
+
+

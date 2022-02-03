@@ -6,7 +6,35 @@
 
 //main function of this file
 $(() => {
-  renderTweets(articles)
+
+  loadTweets();
+
+  $('#tweet-form').on('submit', (event) => {
+    event.preventDefault();
+
+    if ( $('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
+      alert('Input Box Cannot be Empty!');
+    }
+    if ( Number($('#tweet-text').val().length) > 140 ) {
+      alert('Input Number exceeded Maximum!');
+      $('#tweet-text').val('').focus();
+      $('.counter').html(140);
+      $('.counter').css('color', '#545149');
+    }
+
+    const data = $('#tweet-form').serialize();
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: data,
+    }).then( () => {
+      $('#tweet-text').val('').focus();
+      $('.counter').html(140);
+      loadTweets();
+    });
+  });
+  
 })
 
 
@@ -55,43 +83,27 @@ const createTweetElement = (data) => {
 
 
 const renderTweets = (tweets) => {
-
-  const container = $('#tweet-container');
-
+  const $container = $('#tweet-container');
+  $container.empty();
   for (const tweet of tweets) {
     const element = createTweetElement(tweet);
-    container.append(element);
+    $container.prepend(element);
   }
 };
 
 
-const articles = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const loadTweets = () => {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+  }).then((data) => {
+    renderTweets(data);
+  })
+};
 
-const createTweetElementold = (data) => {
+
+// the more complicated way but did it for practice
+const createTweetElementOld = (data) => {
 
   const $username = $('<div>').addClass('name');
   const $name = $('<div>').text(data.user.name);
@@ -127,25 +139,3 @@ const createTweetElementold = (data) => {
   const $oldTweet = $('#old-tweet');
   $oldTweet.append($article);
 };
-
-
-
-
-// $(() => {
-//   const $article = $('#article');
-//   const $inputButton = $('#tweet-button');
-
-
-//   // post new tweet
-//   $inputButton.on('click', (event) => {
-//     event.preventDefault();
-//     const $inputField = $('#tweet-text');
-//     const $inputValue = $inputField.val();
-//     const $div = $('<div class="new-tweet">').text($inputValue);
-//     $article.append($div);
-//     $inputField.val('').focus();
-//     $('.counter').html(140); 
-//   });
-
-
-// });

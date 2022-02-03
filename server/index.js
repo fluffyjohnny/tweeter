@@ -33,21 +33,14 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 app.use("/tweets/", tweetsRoutes);
 
 
-$(() => {
-
-  $.ajax({
-    url: '/tweets',
-    method: 'GET',
-    success: (data) => {
-      console.log(data);
-    }
-  });
-  
-});
+/////////////////////////
+app.get('/tweets', (res, req) => {
+  console.log(res);
+})
 
 
-app.post('/tweets/', (res, req) => {
-  
+app.post('/tweets', (res, req) => {
+  res.status(201).send();
 });
 
 app.listen(PORT, () => {
