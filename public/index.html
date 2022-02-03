@@ -29,6 +29,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 </head>
 
 
@@ -63,42 +64,7 @@
           </div>
         </form>
     </section>
-
-
-    <section class="old-tweet">
-      <article id="article">
-        <header class="old-tweet">
-          <div class="name">
-            <i class="far fa-laugh"></i>
-            Jeff
-          </div>
-          <div class="nameAt">
-            @ChanningTatum
-          </div>
-        </header>
-        <p id="tweet-content"> hello my name is Jieff</p>
-        <footer>
-          <div>
-            8 years ago
-          </div>
-          <div>
-          <div class="icons">
-            <div class="icon1">
-              <i class="fa-solid fa-flag"></i>
-            </div>
-            <div class="icon2">
-              <i class="fa-solid fa-retweet"></i>
-            </div>
-            <div class='icon3'>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </div>
-        </footer>
-
-      </article>
-
-
+    <section id="tweet-container">
     </section>
   </main>
 </body>
@@ -110,3 +76,41 @@
   <script type="text/javascript" src="/scripts/hover.js"></script>
   <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>
+
+<!-- 
+
+<article class="article">
+  <header class="user">
+    <div class="name">
+      <div>
+        <img src="https://i.imgur.com/73hZDYK.png"/>
+      </div>
+      <div>Channing</div>
+    </div>
+    <div class="nameAt">
+      @ChanningTatum
+    </div>
+  </header>
+  <section class="content">
+    <p> hello my name is Jieff</p>
+  </section>
+  <footer class="footer">
+    <div class="timeago">
+      <% timeago.format(new Date()); %>
+    </div>
+    <div>
+    <div class="icons">
+      <div class="icon1">
+        <i class="fa-solid fa-flag"></i>
+      </div>
+      <div class="icon2">
+        <i class="fa-solid fa-retweet"></i>
+      </div>
+      <div class='icon3'>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+</article> -->

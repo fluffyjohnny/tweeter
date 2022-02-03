@@ -1,10 +1,10 @@
 
-.old-tweet {
+#tweet-container {
   width: auto;
   width: 100%;
 }
 
-#article {
+.article {
   display: flex;
   flex-direction: column;
   font-family: "Source Sans Pro";
@@ -16,16 +16,19 @@
 }
 
 
-header {
+.user {
   display: flex;
   justify-content: space-between;
   padding: 5px;
 }
 
 .name {
+  display: flex;
+  align-items: center;
   font-size: 25px;
   color: #545149;
   font-weight: 300;
+  gap: 10px;
 }
 
 .nameAt {
@@ -34,11 +37,11 @@ header {
   overflow: hidden;
 }
 
-#tweet-content {
+.content {
   display: flex;
   border: none;
   border-bottom : 4px solid #545149;
-  /* height: 45px; */
+  height: 4em;
   padding: 20px 15px;
   align-items: center;
   margin: 0px;
@@ -47,12 +50,12 @@ header {
   overflow: hidden;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
   padding: 10px 10px;
-  
+  margin: 0px;
 }
 
 
