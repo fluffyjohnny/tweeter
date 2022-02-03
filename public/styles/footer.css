@@ -1,0 +1,19 @@
+
+#to-the-top {
+  display: flex;
+  justify-content: flex-end;
+  margin:20px;
+}
+
+
+
+.bottom-arrow {
+  color: #4056A1;
+  font-size: 30px;
+  transition: .4s ease-in-out;
+}
+
+.bottom-arrow:hover {
+  color: #191970;
+  font-size: 40px;
+}

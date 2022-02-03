@@ -1,6 +1,5 @@
 
 
-
 const input = document.getElementById('tweet-text');
 
 
