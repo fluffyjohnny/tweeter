@@ -46,28 +46,42 @@
     <span>
       <img src="/images/profile-hex.png">
     </span>
-  
       <h2>Baby Bokchoy</h2>
-   
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
 
     <section class="new-tweet">
+      <span class="error">
+        ⚠️ Input Limit Reached! Please Shorten Your Response ⚠️
+      </span>
       <h2>Compose Tweet</h2>
         <form id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" ></textarea>
-          <div class="footer">
+          <div class="new-tweet-footer">
             <button id="tweet-button" style="font-family: Bungee;" type="submit" role="button">Tweet</button>
             <output style="font-family: Bungee;" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
     </section>
-    <section id="tweet-container">
-      
 
-<article class="article">
+    <section id="tweet-container">
+    </section>
+  </main>
+</body>
+
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/navbar.js"></script>
+</html>
+
+
+
+
+<!-- <article class="article">
   <header class="user">
     <div class="name">
       <div>
@@ -100,17 +114,4 @@
     </div>
   </div>
   </footer>
-</article>
-
-    </section>
-  </main>
-</body>
-
-
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script type="text/javascript" src="/scripts/navbar.js"></script>
-</html>
-
-
+</article> -->
