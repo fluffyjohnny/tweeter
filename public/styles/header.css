@@ -6,9 +6,14 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
-  font-family: "Source Sans Pro";
-  font-weight: 600;
+  padding-top: 30px;
   background-color: #e8e4cf;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+}
+
+.profile .user {
+  margin-bottom: 25px;
+  margin-top: 10px;
+  font-family: "Source Sans Pro";
+  font-size: 35px;
 }

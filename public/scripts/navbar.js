@@ -15,4 +15,8 @@ $(() => {
     }
   };
 
+  $('.bounce-arrow').click(() => { 
+    $('.new-tweet').toggle(500, () => {})
+    $('#tweet-text').focus();
+  })
 });
