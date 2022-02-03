@@ -10,7 +10,9 @@ $(input).on('input', function() {
   if (count > 140) {
     $('.counter').css('color', '#8B0000');
     $('.counter').html(140 - count);
-  } else {
+  } 
+  if (count < 140) {
+    $('.counter').css('color', '#545149');
     $('.counter').html(140 - count);
   }
 });

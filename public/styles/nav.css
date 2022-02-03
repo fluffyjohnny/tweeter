@@ -10,13 +10,11 @@
   z-index: 9;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  
+  overflow: hidden;  
 }
 
 .logo {
   font-size: 35px;
-  /* padding-top: 15px; */
 }
 
 

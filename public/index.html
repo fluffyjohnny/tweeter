@@ -46,15 +46,20 @@
     <span>
       <img src="/images/profile-hex.png">
     </span>
-      <h2>Baby Bokchoy</h2>
+      <h2>Pam Beesly</h2>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
 
     <section class="new-tweet">
-      <span class="error">
-        ⚠️ Input Limit Reached! Please Shorten Your Response ⚠️
-      </span>
+      <div id="error">
+        <span class="limit-error">
+          ⚠️ Input Limit Reached! Please Shorten Your Response ⚠️
+        </span>
+        <span class="empty-error">
+          ⚠️ Empty Input! Please Input Your Response ⚠️
+        </span>
+      </div>
       <h2>Compose Tweet</h2>
         <form id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>

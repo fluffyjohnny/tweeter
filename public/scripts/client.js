@@ -4,7 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//main function of this file
+
+
 $(() => {
 
   loadTweets();
@@ -13,17 +14,28 @@ $(() => {
     event.preventDefault();
 
     if ( $('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
-      alert('Input Box Cannot be Empty!');
+      $('.empty-error').slideDown(600, () => {
+        $('.empty-error').css('display', 'flex');
+      });
     }
     if ( Number($('#tweet-text').val().length) > 140 ) {
-      alert('Input Number exceeded Maximum!');
-      $('#tweet-text').val('').focus();
-      $('.counter').html(140);
-      $('.counter').css('color', '#545149');
+      $('.limit-error').slideDown(600, () => {
+        $('.limit-error').css('display', 'flex');
+      })
+      $('#tweet-text').focus();
+      return;
     }
 
-    const data = $('#tweet-form').serialize();
+    $('#tweet-text').on('input', () => {
+      $('.limit-error').slideUp(600, () => {
+        $('.limit-error').css('display', 'none');
+      });
+      $('.empty-error').slideUp(600, () => {
+        $('.empty-error').css('display', 'none');
+      });
+    });
 
+    const data = $('#tweet-form').serialize();
     $.ajax({
       method: 'POST',
       url: '/tweets',
@@ -36,7 +48,7 @@ $(() => {
   });
 })
 
-const createTweetElementOld = (data) => {
+const createTweetElement = (data) => {
   const ago = timeago.format(data.created_at); 
 
   const $username = $('<div>').addClass('name');
@@ -77,7 +89,7 @@ const renderTweets = (tweets) => {
   const $container = $('#tweet-container');
   $container.empty();
   for (const tweet of tweets) {
-    const element = createTweetElementOld(tweet);
+    const element = createTweetElement(tweet);
     $container.prepend(element);
   }
 };
@@ -91,47 +103,3 @@ const loadTweets = () => {
     renderTweets(data);
   })
 };
-
-
-// const createTweetElement = (data) => {
-//   const ago = timeago.format(data.created_at); 
-
-//   const element = $(`
-//     <article class="article">
-//     <header class="user">
-//       <div class="name">
-//         <div>
-//           <img src=${data.user.avatars}/>
-//         </div>
-//         <div>${data.user.name}</div>
-//       </div>
-//       <div class="nameAt">
-//         ${data.user.handle}
-//       </div>
-//     </header>
-//     <section class="content">
-//       <p> ${data.content.text}</p>
-//     </section>
-//     <footer class="footer">
-//       <div class="timeago">
-//         ${ago}
-//       </div>
-//       <div>
-//       <div class="icons">
-//         <div class="icon1">
-//           <i class="fa-solid fa-flag"></i>
-//         </div>
-//         <div class="icon2">
-//           <i class="fa-solid fa-retweet"></i>
-//         </div>
-//         <div class='icon3'>
-//           <i class="fa-solid fa-heart"></i>
-//         </div>
-//       </div>
-//     </div>
-//     </footer>
-//   </article>`);
-
-//   return element;
-// };
-

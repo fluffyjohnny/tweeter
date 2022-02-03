@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 }
 
-.error {
+.limit-error {
   display: none;
   justify-content: center;
   border: solid;
@@ -15,8 +15,21 @@
   border-color: #F08080;
   font-size: 20px;
   padding: 10px;
-  margin: 0px 30px;
+  margin: 0 45px;
 }
+
+.empty-error {
+  display: none;
+  justify-content: center;
+  border: solid;
+  border-radius: 5px;
+  color: #CD5C5C;
+  border-color: #F08080;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0 90px;
+}
+
 
 #tweet-text {
   display: flex;
