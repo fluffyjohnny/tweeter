@@ -7,17 +7,21 @@
 
 
 $(() => {
-
+  // first loads what we have in the database
   loadTweets();
 
+  // when submit button is clicked, it checks for valitdation, if all good, send a post request to the server
   $('#tweet-form').on('submit', (event) => {
     event.preventDefault();
 
+    // checks if input is empty, show error msg
     if ( $('#tweet-text').val() === '' || $('#tweet-text').val() === null) {
       $('.empty-error').slideDown(600, () => {
         $('.empty-error').css('display', 'flex');
       });
     }
+
+    //checks if over input limit, show error msg
     if ( Number($('#tweet-text').val().length) > 140 ) {
       $('.limit-error').slideDown(600, () => {
         $('.limit-error').css('display', 'flex');
@@ -26,6 +30,7 @@ $(() => {
       return;
     }
 
+    // when user start typing again, retract all the error message(s)
     $('#tweet-text').on('input', () => {
       $('.limit-error').slideUp(600, () => {
         $('.limit-error').css('display', 'none');
@@ -35,12 +40,14 @@ $(() => {
       });
     });
 
+    // serialize the input into a encrypted url and post to server
     const data = $('#tweet-form').serialize();
     $.ajax({
       method: 'POST',
       url: '/tweets',
       data: data,
     }).then( () => {
+      // if success, return input area to empty and put focus on it, reset the counter and reload the tweets
       $('#tweet-text').val('').focus();
       $('.counter').html(140);
       loadTweets();
@@ -48,6 +55,8 @@ $(() => {
   });
 })
 
+
+// the template for new tweets
 const createTweetElement = (data) => {
   const ago = timeago.format(data.created_at); 
 
@@ -85,8 +94,11 @@ const createTweetElement = (data) => {
   return $article;
 };
 
+
+// loop through the data and print out the html for each user, and add them to the container
 const renderTweets = (tweets) => {
   const $container = $('#tweet-container');
+  // emptying the list before replacing with a whole new database
   $container.empty();
   for (const tweet of tweets) {
     const element = createTweetElement(tweet);
@@ -94,7 +106,7 @@ const renderTweets = (tweets) => {
   }
 };
 
-
+// get request to load the tweets
 const loadTweets = () => {
   $.ajax({
     url: '/tweets',

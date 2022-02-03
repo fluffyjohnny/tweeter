@@ -33,12 +33,12 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 app.use("/tweets/", tweetsRoutes);
 
 
-/////////////////////////
+// to check for .JSON file of the data
 app.get('/tweets', (res, req) => {
   console.log(res);
 })
 
-
+// if data is successfully recieved, set status code and send it right back
 app.post('/tweets', (res, req) => {
   res.status(201).send();
 });

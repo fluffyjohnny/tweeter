@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
-
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
   <!-- External CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" type="text/css" />
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -31,8 +25,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
-</head>
 
+</head>
 
 <body>
   <!-- Top nav bar (fixed) -->
@@ -49,7 +43,7 @@
     <span>
       <img src="/images/profile-hex.png">
     </span>
-      <p class="user"><strong>Pamela&nbsp</strong>Beesly</p>
+    <p class="user"><strong>Pamela&nbsp</strong>Beesly</p>
   </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
@@ -64,67 +58,31 @@
         </span>
       </div>
       <h2>🍃 Compose Tweet 🕊</h2>
-        <form id="tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" placeholder="   If you stare at the Sun long enough, you get a dog... 😎"></textarea>
-          <div class="new-tweet-footer">
-            <button id="tweet-button" style="font-family: Bungee;" type="submit" role="button">Tweet</button>
-            <output style="font-family: Bungee;" name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
+      <form id="tweet-form">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"
+          placeholder="   If you stare at the Sun long enough, you get a dog... 😎"></textarea>
+        <div class="new-tweet-footer">
+          <button id="tweet-button" style="font-family: Bungee;" type="submit" role="button">Tweet</button>
+          <output style="font-family: Bungee;" name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
     </section>
     <section id="tweet-container">
+
     </section>
   </main>
-  <footer id="to-the-top">
+  <footer id="to-the-top-arrow">
     <a class="bottom-arrow">
       <i class="fas fa-arrow-alt-circle-up"></i>
     </a>
   </footer>
 </body>
 
+<!-- App JS -->
+<script type="text/javascript" src="/scripts/client.js"></script>
+<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+<script type="text/javascript" src="/scripts/composer-anchor-button.js"></script>
+<script type="text/javascript" src="/scripts/navbar.js"></script>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  <script type="text/javascript" src="/scripts/composer-anchor-button.js"></script>
-  <script type="text/javascript" src="/scripts/navbar.js"></script>
 </html>
-
-
-
-
-<!-- <article class="article">
-  <header class="user">
-    <div class="name">
-      <div>
-        <img src="https://i.imgur.com/73hZDYK.png"/>
-      </div>
-      <div>Channing</div>
-    </div>
-    <div class="nameAt">
-      @ChanningTatum
-    </div>
-  </header>
-  <section class="content">
-    <p> hello my name is Jieff</p>
-  </section>
-  <footer class="footer">
-    <div class="timeago">
-      time
-    </div>
-    <div>
-    <div class="icons">
-      <div class="icon1">
-        <i class="fa-solid fa-flag"></i>
-      </div>
-      <div class="icon2">
-        <i class="fa-solid fa-retweet"></i>
-      </div>
-      <div class='icon3'>
-        <i class="fa-solid fa-heart"></i>
-      </div>
-    </div>
-  </div>
-  </footer>
-</article> -->
