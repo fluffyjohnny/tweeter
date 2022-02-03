@@ -23,9 +23,19 @@
   flex-direction: column;
   align-items: center;
   font-family: "Source Sans Pro";
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 0.25s, visibility 0.25s;
 }
 
-.sticky {
+.navbarRight.no-show {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.sticky-top {
   top: 0;
   width: 100%;
   position: sticky;
@@ -36,6 +46,7 @@
   color: #fff;
   font-size: 30px;
   padding-top: 5px;
+  cursor: pointer;
   animation: bounce 3.5s ease infinite;
 }
 

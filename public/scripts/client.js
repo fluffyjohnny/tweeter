@@ -79,7 +79,7 @@ const createTweetElement = (data) => {
   const $footer = $('<footer>').addClass('footer');
   $footer.append($createdAt, $icons);
 
-  const $article = $('<article>').addClass("article");
+  const $article = $('<article>').addClass("user-article");
   $article.append($header, $content, $footer);
 
   return $article;

@@ -7,6 +7,7 @@
   margin-bottom: 20px;
 }
 
+
 .limit-error {
   display: none;
   justify-content: center;
@@ -53,6 +54,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 15px;
+  padding: 0 5px;
   font-size: 20px;
 }
 
