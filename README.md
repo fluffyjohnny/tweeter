@@ -19,5 +19,5 @@ This project was done with the utilization of front-end and back-end languages i
 - timeago.js 4.0.2
 
 # Getting Started
-- Install all dependencies (using the `npm install` command)
-- Run the development web server using the`"node server/index.js",`command.
+- Install all dependencies using the `npm install` command.
+- Run the development web server using the `node server/index.js` command.
