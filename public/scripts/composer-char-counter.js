@@ -17,4 +17,5 @@ $(input).on('input', function() {
     $('.counter').css('color', '#545149');
     $('.counter').html(140 - count);
   }
+
 });

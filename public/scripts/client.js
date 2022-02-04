@@ -65,13 +65,11 @@ const createTweetElement = (data) => {
   const $avatar = $('<div>').prepend(`<img src=${data.user.avatars}/>`);
   $username.append($avatar, $name);
 
-  const $handle = $('<div>').addClass('nameAt').text(data.user.handle);
+  const $handle = $('<div>').addClass('handle').text(data.user.handle);
   const $header = $('<header>').addClass('user');
   $header.append($username, $handle);
 
-  const $text = $('<p>').text(data.content.text);
-  const $content = $('<section>').addClass('content');
-  $content.append($text);
+  const $content = $('<section>').addClass('content').text(data.content.text);
 
   const $icons = $('<div>').addClass('icons')
   const $icon3 = $('<div>').addClass("icon3");

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 550px) { 
+  #navbar {
+    background-color: #e8e4cf;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum-dark.png");
+    color: black;
+    font-size: 3.5vw;
+  }
+
+  .profile .user {
+    font-size: 4.3vw;
+  }
+
+  .handle {
+    font-size: 4.3vw;
+  }
+
+};

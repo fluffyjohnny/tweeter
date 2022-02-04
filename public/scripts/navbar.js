@@ -31,4 +31,7 @@ $(() => {
     $('.new-tweet').toggle(500, () => {});
     $('#tweet-text').focus();
   })
+
+
+  
 });
