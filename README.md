@@ -5,9 +5,9 @@
 This project was done with the utilization of front-end and back-end languages including `JS`, `HTML`, `CSS`, `jQuery`, `AJAX`, `Node`, and `Express`. Tweeter is a single page application that allows the user to public their opinions, through a click of a button, and connect with their imaginary friends within the stored database. This project also tackled the concept of Responsive Design which the interface will switch between different layouts based on the resolution of the screen. This means that user can easily transition between devices with different sized screens.
 
 # Final Product
-!["Desktop View"]()
-!["Tablet View"]()
-!["Mobile View"]()
+!["Desktop View"](https://raw.githubusercontent.com/fluffyjohnny/tweeter/master/public/images/desktop_view.png)
+!["Tablet View"](https://raw.githubusercontent.com/fluffyjohnny/tweeter/master/public/images/tablet_view.png)
+!["Mobile View"](https://raw.githubusercontent.com/fluffyjohnny/tweeter/master/public/images/phone_view.png)
 
 
 # Dependencies
