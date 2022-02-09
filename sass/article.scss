@@ -1,3 +1,4 @@
+
 #tweet-container {
   width: auto;
   width: 100%;
@@ -12,17 +13,18 @@
   border-radius: 7px;
   margin-top: 20px;
   padding: 15px;
-  transition: 0.4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 .user-article:hover {
   box-shadow: 12px 7px #D3D3D3;
+  
 }
 
 .user {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 5px; 
 }
 
 .name {
@@ -47,9 +49,10 @@
   text-shadow: 3px 1px #D3D3D3;
 }
 
+
 .content {
   border: none;
-  border-bottom: 4px solid #545149;
+  border-bottom : 4px solid #545149;
   height: 20%;
   padding: 0px 15px 10px;
   margin: 20px 15px 0px 15px;
@@ -66,15 +69,16 @@
   padding: 10px 10px;
 }
 
+
 .icons {
   display: flex;
   flex-direction: row;
-  color: #4056A1;
+  color:#4056A1;
 }
 
 .icon1 {
   margin-left: 7px;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .icon1:hover {
@@ -83,7 +87,7 @@
 
 .icon2 {
   margin-left: 7px;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .icon2:hover {
@@ -92,7 +96,7 @@
 
 .icon3 {
   margin-left: 7px;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .icon3:hover {

@@ -1,6 +1,8 @@
-@media only screen and (min-width: 1024px) {
+
+
+@media only screen and (min-width: 1024px) { 
   body {
-    display: flex;
+    display:flex;
     flex-direction: column;
   }
 
@@ -57,7 +59,12 @@
 
   .profile:hover {
     box-shadow: 12px 12px #A9A9A9;
-  }
+  };
+
+//   .profile-picture {
+//     max-width: 1vh;  
+// height: auto;  
+//   }
 
   .profile .user {
     font-size: 4.5vh;
@@ -66,4 +73,10 @@
   #tweet-text {
     font-size: 2.3vw;
   }
-}
+
+};
+
+
+
+
+

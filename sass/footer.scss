@@ -1,8 +1,11 @@
+
 #to-the-top-arrow {
   display: flex;
   justify-content: flex-end;
-  margin: 20px;
+  margin:20px;
 }
+
+
 
 .bottom-arrow {
   position: fixed;
@@ -16,6 +19,7 @@
   z-index: 1000;
   transition: opacity 0.7s, visibility 0.7s, color 0.5s, font-size 0.5s;
 }
+
 
 .bottom-arrow:hover {
   cursor: pointer;
