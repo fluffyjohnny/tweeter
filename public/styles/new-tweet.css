@@ -5,8 +5,7 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
-
-.limit-error {
+.new-tweet #error .limit-error {
   display: none;
   justify-content: center;
   border: solid;
@@ -16,9 +15,9 @@
   font-size: 20px;
   padding: 10px;
   margin: 0 10%;
+  text-align: center;
 }
-
-.empty-error {
+.new-tweet #error .empty-error {
   display: none;
   justify-content: center;
   border: solid;
@@ -28,9 +27,14 @@
   font-size: 20px;
   padding: 10px;
   margin: 0 10%;
+  text-align: center;
 }
-
-#tweet-text {
+.new-tweet label {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 2.8vw;
+}
+.new-tweet #tweet-text {
   display: flex;
   background-color: transparent;
   border: none;
@@ -38,7 +42,7 @@
   outline: none;
   width: 100%;
   height: 20%;
-  font-size: 2.5vw;
+  font-size: 2.6vw;
   justify-content: flex-start;
   font-family: "Source Sans Pro";
   font-weight: 300;
@@ -46,8 +50,7 @@
   padding: 5px;
   overflow: auto;
 }
-
-.new-tweet-footer {
+.new-tweet .new-tweet-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,27 +58,20 @@
   padding: 0 5px;
   font-size: 20px;
 }
-
-label {
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-}
-
-form button {
+.new-tweet button {
   background-color: #4056A1;
   color: white;
   border: none;
   font-size: 19px;
   padding: 6px 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.4s ease-in-out;
 }
-
-form button:hover {
+.new-tweet button:hover {
   box-shadow: 8px 5px #D3D3D3;
   background-color: #191970;
 }
-
-.counter {
-  text-shadow: 6px 2px #D3D3D3;
+.new-tweet .counter {
+  text-shadow: 4px 2px #D3D3D3;
+  font-size: 0.8em;
 }

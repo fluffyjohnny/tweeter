@@ -1,3 +1,7 @@
+$phone-fontsize: 3.5vw;
+$footer-fontsize: 2vw;
+$title-fontsize: 6vw;
+
 @media only screen and (max-width: 550px) { 
   #navbar {
     background-color: #e8e4cf;
@@ -6,12 +10,75 @@
     font-size: 3.5vw;
   }
 
-  .profile .user {
-    font-size: 4.3vw;
+  .profile {
+    img {
+      height: 40vw;
+    }
+    .user {
+      font-size: $title-fontsize;
+    }
   }
 
-  .handle {
-    font-size: 4.3vw;
+  #error {
+    .limit-error {
+      font-size: $phone-fontsize; 
+      text-align: center;
+    }
+    .empty-error {
+      font-size: $phone-fontsize; 
+      text-align: center;
+    }
   }
+
+  h2 {
+    font-size: $title-fontsize;
+  }
+
+  #tweet-form {
+    label {
+      font-size: $phone-fontsize;
+    }
+    #tweet-text {
+      font-size: $phone-fontsize;
+    }
+    .new-tweet-footer {
+      font-size: $footer-fontsize;
+    }
+  }
+
+  .user-article {
+    .name {
+      font-size: $phone-fontsize;
+    }
+    .content {
+      font-size: $phone-fontsize;
+    }
+    .footer {
+      font-size: $footer-fontsize;
+    }
+  }
+
+  
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+ 
+
+ 
+
+  
+
+  
+
+ 
 
 };

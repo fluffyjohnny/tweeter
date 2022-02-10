@@ -1,82 +1,79 @@
 
-
 @media only screen and (min-width: 1024px) { 
   body {
     display:flex;
     flex-direction: column;
+    #desktop-body {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      .blank-span {
+        display: flex;
+        justify-content: center;
+        padding: 65px;
+        width: 40%;
+        .profile-picture img {
+          height: 30vh;
+        }
+        .profile {
+          position: fixed;
+          width: 30%;
+          height: 50%;
+          box-shadow: 10px 10px #D3D3D3;
+          border-radius: 10px;
+          transition: 0.5s;
+          &:hover{
+            box-shadow: 12px 12px #A9A9A9;
+          }
+          .user {
+            font-size: 4.5vh;
+          }
+        }
+      }
+      .container {
+        width: 60%;
+        padding: 30px 50px 30px 40px;
+        #error {
+          .limit-error {
+            font-size: 1em;
+            margin: 0px 2%;
+          }
+          .empty-error {
+            font-size: 1em;
+            margin: 0px 4%;
+          }
+        }
+        h2 {
+          font-size: 2em;
+          margin: 20 10px 10px 10px;
+        }
+        label {
+          font-size: 1.2em;
+        }
+        #tweet-text {
+          font-size: 1em;
+          padding: 10px 0.4em;
+        }
+        .user-article {
+          margin-top: 30px;
+          .user {
+            .name{
+              font-size: 1.1em;
+            }
+            .handle {
+              font-size: 0.9em;
+            }
+          }
+          .content {
+            font-size: 1.2em;
+            height: 10%;
+            padding-bottom: 20px;
+          }
+          .footer {
+            font-size: 0.6em;
+          }
+        }
+      }
+    }
   }
-
-  #desktop-body {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-  }
-
-  .container {
-    width: 60%;
-    padding: 30px 50px 30px 40px;
-  }
-
-  .user-article {
-    margin-top: 30px;
-  }
-
-  h2 {
-    margin: 20 10px 10px 10px;
-  }
-
-  .blank-span {
-    display: flex;
-    justify-content: center;
-    padding: 65px;
-    width: 40%;
-  }
-
-  .profile {
-    position: fixed;
-    width: 30%;
-    height: 50%;
-    box-shadow: 10px 10px #D3D3D3;
-    border-radius: 10px;
-    transition: 0.5s;
-  }
-
-  .content {
-    font-size: 2.3vw;
-    height: 10%;
-    padding-bottom: 20px;
-  }
-
-  .limit-error {
-    font-size: 1.8vw;
-    margin: 0px 2%;
-  }
-
-  .empty-error {
-    font-size: 2vw;
-    margin: 0px 4%;
-  }
-
-  .profile:hover {
-    box-shadow: 12px 12px #A9A9A9;
-  };
-
-//   .profile-picture {
-//     max-width: 1vh;  
-// height: auto;  
-//   }
-
-  .profile .user {
-    font-size: 4.5vh;
-  }
-
-  #tweet-text {
-    font-size: 2.3vw;
-  }
-
 };
-
-
-
-
-

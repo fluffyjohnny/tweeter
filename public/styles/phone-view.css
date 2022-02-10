@@ -6,11 +6,43 @@
     font-size: 3.5vw;
   }
 
+  .profile img {
+    height: 40vw;
+  }
   .profile .user {
-    font-size: 4.3vw;
+    font-size: 6vw;
   }
 
-  .handle {
-    font-size: 4.3vw;
+  #error .limit-error {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  #error .empty-error {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 6vw;
+  }
+
+  #tweet-form label {
+    font-size: 3.5vw;
+  }
+  #tweet-form #tweet-text {
+    font-size: 3.5vw;
+  }
+  #tweet-form .new-tweet-footer {
+    font-size: 2vw;
+  }
+
+  .user-article .name {
+    font-size: 3.5vw;
+  }
+  .user-article .content {
+    font-size: 3.5vw;
+  }
+  .user-article .footer {
+    font-size: 2vw;
   }
 }
